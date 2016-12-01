@@ -4,6 +4,7 @@ $(function(){
 	var ol=$("#tu ul li").size();
 	var deg = 360/ol;
 	var xdeg = 0,ydeg = -10,xs,ys;
+	var posX,posY;
 	//alert(deg);
 	for(var i=ol-1; i>=0; i--){
 		$('#tu ul li').eq(i).css({transition:"1s "+(ol-i)*0.15+
@@ -32,5 +33,31 @@ $(function(){
 				$(this).unbind('mousemove');
 				
 				});
+				
+				
+				
+				
+	
+	//移动端
+	document.addEventListener('touchstart', function(e) {
+		var touches = e.touches[0];
+		posX = touches.clientX;
+		posY = touches.clientY;
+	});
+	function move(e){
+		e.preventDefault();
+		var touches = e.touches[0];
+		xs = touches.clientX - posX;
+		ys = touches.clientY - posY;
+		posX = touches.clientX;
+		posY = touches.clientY;
+		xdeg += xs*0.3;
+		ydeg -= ys*0.1;
+		$('#tu').css('transform',
+		"perspective(800px) rotateX("+ydeg+"deg) rotateY("+xdeg+"deg)");
+		
+	}
+	document.addEventListener('touchmove',move);
+	
 		
 	});

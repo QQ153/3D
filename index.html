@@ -6,24 +6,33 @@
 <script src="td.js"></script> 
 <title>3D拖动</title>
  <style type="text/css">
-   *{margin:0px; padding:0px;}
-    body{ background:#333; width:100%; height:100%;
-	 overflow:hidden;  /*溢出强制隐藏*/ 
+   *{
+   		margin:0px; padding:0px;
+   	}
+    body{ 
+    	background:#333; width:100%; height:100%;
+	 	overflow:hidden;  /*溢出强制隐藏*/ 
 	 }    
-	 #tu{ width:133px; height:200px; margin:15% auto 0;
-	 position:relative; top:-100px; transform-style:preserve-3d; /*设置3D*/
-	 /* 设置视觉距离  x轴y轴倾斜*/
-	   transform:perspective(1000px) rotateX(-10deg) rotateY(0deg);}
-	 img{width: 100%}
-     #tu ul li{ list-style:none; width:133px; height:200px;
-	 position:absolute; top:0px; left:0px; border-radius:5px;
-	 /* 背影模化 x轴偏移 y轴偏移 淡化值 颜色值     圆角*/
-	 box-shadow:0 0 10px #fff; overflow:hidden; 
-	 /* 沿Y轴旋转  沿Z轴放大缩小*/
-	 transform:rotateY(0deg) translateZ(0px);
-	 /*  倒阴影 只兼用谷歌浏览器以及手机浏览器  需要模拟换兼用*/
-	 -webkit-box-reflect:below 10px -webkit-linear-gradient(
-	 top,rgba(0,0,0,0) 40%,rgba(0,0,0,.5)100%);} 
+	#tu{ 
+	 	width:133px; height:200px; margin:15% auto 0;
+	 	position:relative; top:-100px; transform-style:preserve-3d; /*设置3D*/
+	 	/* 设置视觉距离  x轴y轴倾斜*/
+	    transform:perspective(1000px) rotateX(-10deg) rotateY(0deg);
+	}
+	 img{
+	 	 width: 100%
+	 }
+     #tu ul li{ 
+     	 list-style:none; width:133px; height:200px;
+		 position:absolute; top:0px; left:0px; border-radius:5px;
+		 /* 背影模化 x轴偏移 y轴偏移 淡化值 颜色值     圆角*/
+		 box-shadow:0 0 10px #fff; overflow:hidden; 
+		 /* 沿Y轴旋转  沿Z轴放大缩小*/
+		 transform:rotateY(0deg) translateZ(0px);
+		 /*  倒阴影 只兼用谷歌浏览器以及手机浏览器  需要模拟换兼用*/
+		 -webkit-box-reflect:below 10px -webkit-linear-gradient(
+		 top,rgba(0,0,0,0) 40%,rgba(0,0,0,.5)100%);
+	} 
  </style>
 </head>
 
@@ -31,9 +40,9 @@
    <div id="tu">
    <ul>
 		<li><img src="http://imgsrc.baidu.com/forum/pic/item/68a0f7246b600c33b52ff987184c510fd8f9a169.jpg" alt="tu1" title="tu1"></li>
-		<li><img src="http://t-1.tuzhan.com/d4b718357ba4/c-1/l/2012/09/15/14/ccf8066d9f4d46b4a0c48b986d15ca0b.jpg" alt="tu2" title="tu2"></li>
+		<li><img src="http://www.cnanzhi.com/upload/bizhi/2015/0506/14309016903733.jpg" alt="tu2" title="tu2"></li>
 		<li><img src="http://img0.ph.126.net/3m7pUxqYdPVQMvKh8Um5pg==/3746431940119213314.jpg" alt="tu3" title="tu3"></li>
-		<li><img src="http://t-1.tuzhan.com/7c6dc07e9b71/c-2/l/2013/09/24/16/4aba8a55cb0b44daa34df711c5e62d77.jpg" alt="tu4" title="tu4"></li>
+		<li><img src="http://p3.gexing.com/qqpifu/20121130/2044/50b8aa3142775.jpg" alt="tu4" title="tu4"></li>
 		<li><img src="http://cdn.duitang.com/uploads/item/201306/14/20130614185803_ePZRh.jpeg" alt="tu5" title="tu5"></li>
 		<li><img src="http://cdn.duitang.com/uploads/item/201507/18/20150718140829_vGcKF.jpeg" alt="tu6" title="tu6"></li>
 		<li><img src="http://imgsrc.baidu.com/forum/pic/item/d53f8794a4c27d1e93d69f251bd5ad6edcc4385a.jpg" alt="tu7" title="tu7"></li>

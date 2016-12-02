@@ -71,12 +71,7 @@ $(function(){
 	    if( width < height ){
 	        console.log(width + " " + height);
 	        $show =  $('#tu');
-	        $show.width(height);
-	        $show.height(width);
-	        $show.css('top',  (height-width)/2 );
-	        $show.css('left',  0-(height-width)/2 );
-	        $show.css('transform' , 'rotate(90deg)');
-	        $show.css('transform-origin' , '50% 50%');
+	        $show.css('margin-top' , '50%');
 	    }
 
 
@@ -92,21 +87,10 @@ $(function(){
         var height =  document.documentElement.clientHeight;
         $show =  $('#tu');
 	        if( width > height ){
-	
-	            $show.width(width);
-	            $show.height(height);
-	            $show.css('top',  0 );
-	            $show.css('left',  0 );
-	            $show.css('transform' , 'none');
-	            $show.css('transform-origin' , '50% 50%');
+				$show.css('margin' , '15%');
 	        }
 	        else{
-	            $show.width(height);
-	            $show.height(width);
-	            $show.css('top',  (height-width)/2 );
-	            $show.css('left',  0-(height-width)/2 );
-	            $show.css('transform' , 'rotate(90deg)');
-	            $show.css('transform-origin' , '50% 50%');
+	            $show.css('margin-top' , '50%');
 	        }
 		},100);
     	}, false);

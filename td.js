@@ -61,3 +61,52 @@ $(function(){
 	
 		
 	});
+	
+
+
+
+	//移动端横屏问题
+	var width = document.documentElement.clientWidth;
+	    var height =  document.documentElement.clientHeight;
+	    if( width < height ){
+	        console.log(width + " " + height);
+	        $show =  $('#tu');
+	        $show.width(height);
+	        $show.height(width);
+	        $show.css('top',  (height-width)/2 );
+	        $show.css('left',  0-(height-width)/2 );
+	        $show.css('transform' , 'rotate(90deg)');
+	        $show.css('transform-origin' , '50% 50%');
+	    }
+
+
+
+		var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+		
+			
+		
+    	window.addEventListener(evt, function() {
+        console.log(evt);
+        setTimeout(function(){
+        var width = document.documentElement.clientWidth;
+        var height =  document.documentElement.clientHeight;
+        $show =  $('#tu');
+	        if( width > height ){
+	
+	            $show.width(width);
+	            $show.height(height);
+	            $show.css('top',  0 );
+	            $show.css('left',  0 );
+	            $show.css('transform' , 'none');
+	            $show.css('transform-origin' , '50% 50%');
+	        }
+	        else{
+	            $show.width(height);
+	            $show.height(width);
+	            $show.css('top',  (height-width)/2 );
+	            $show.css('left',  0-(height-width)/2 );
+	            $show.css('transform' , 'rotate(90deg)');
+	            $show.css('transform-origin' , '50% 50%');
+	        }
+		},100);
+    	}, false);

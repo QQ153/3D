@@ -1,0 +1,27 @@
+	*{
+   		margin:0px; padding:0px;
+   	}
+    body{ 
+    	background:#333; width:100%; height:100%;
+	 	overflow:hidden;  /*溢出强制隐藏*/ 
+	 }    
+	#tu{ 
+	 	width:133px; height:200px; margin:15% auto 0;
+	 	position:relative; top:-100px; transform-style:preserve-3d; /*设置3D*/
+	 	/* 设置视觉距离  x轴y轴倾斜*/
+	    transform:perspective(1000px) rotateX(-10deg) rotateY(0deg);
+	}
+	 img{
+	 	 width: 100%
+	 }
+     #tu ul li{ 
+     	 list-style:none; width:133px; height:200px;
+		 position:absolute; top:0px; left:0px; border-radius:5px;
+		 /* 背影模化 x轴偏移 y轴偏移 淡化值 颜色值     圆角*/
+		 box-shadow:0 0 10px #fff; overflow:hidden; 
+		 /* 沿Y轴旋转  沿Z轴放大缩小*/
+		 transform:rotateY(0deg) translateZ(0px);
+		 /*  倒阴影 只兼用谷歌浏览器以及手机浏览器  需要模拟换兼用*/
+		 -webkit-box-reflect:below 10px -webkit-linear-gradient(
+		 top,rgba(0,0,0,0) 40%,rgba(0,0,0,.5)100%);
+	} 

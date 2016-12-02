@@ -63,34 +63,3 @@ $(function(){
 	});
 	
 
-
-
-	//移动端横屏问题
-	var width = document.documentElement.clientWidth;
-	    var height =  document.documentElement.clientHeight;
-	    if( width < height ){
-	        console.log(width + " " + height);
-	        $show =  $('#tu');
-	        $show.css('margin-top' , '50%');
-	    }
-
-
-
-		var evt = "onorientationchange" in window ? "orientationchange" : "resize";
-		
-			
-		
-    	window.addEventListener(evt, function() {
-        console.log(evt);
-        setTimeout(function(){
-        var width = document.documentElement.clientWidth;
-        var height =  document.documentElement.clientHeight;
-        $show =  $('#tu');
-	        if( width > height ){
-				$show.css('margin' , '15%');
-	        }
-	        else{
-	            $show.css('margin-top' , '50%');
-	        }
-		},100);
-    	}, false);
